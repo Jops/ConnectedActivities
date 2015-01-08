@@ -1,0 +1,10 @@
+{
+  "name": "hack-day-connected-activities",
+  "version": "0.0.1",
+  "description": "socket.io app for BBC iWonder or Bitesize",
+  "dependencies": {
+    "express": "^4.10.2",
+    "socket.io": "^1.2.1",
+    "sanitize-html": "^1.4.3"
+  }
+}

@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Connected Activity Hack Day</title>
+    <link rel="stylesheet" href="/public/index.css">
+    <link rel="stylesheet" href="/public/font.css">
+</head>
+
+<body>
+
+    <section class="upper image">
+        <img src="/public/img/head.png">
+    </section>
+
+    <section class="demo-container">
+        <h2 class="demo-title">Connected Activity</h2>
+        <h3>Link users together for better activities.</h3>
+        <p class="demo-desc">Gameplay logic designs can be used with both Bitesize and Guides audiences to create a shared learning experience.</p>
+        <p class="demo-desc">Users benefit from our own custom backend which links them to a shared resource enriching data in real-time.</p>
+        <div id="canvas-container" class="canvas-container">
+            <canvas id="demo-view"></canvas>
+            <ul id="messages"></ul>
+        </div>
+    </section>
+
+    <section class="upper image">
+        <img src="/public/img/foot.png">
+    </section>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+    <script src="/public/lib/createjs-2013.12.12.min.js"></script>
+    <script data-main="/public/app" src="/public/lib/require.js"></script>
+
+</body>
+
+</html>

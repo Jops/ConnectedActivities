@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font: 16px Curious-Sans Helvetica, Arial;
+    width: 1064px;
+    margin: 0 auto;
+}
+
+#messages {
+    list-style-type: none;
+    margin: 0;
+    margin-bottom: 55px;
+    padding: 0;
+}
+
+#messages > li {
+    padding: 5px 10px;
+    background-color: #666;
+}
+
+#messages > li:nth-child(odd) {
+    background: #444;
+}
+
+.demo-container {
+    margin: 10px 150px 50px;
+}
+
+.demo-title {
+    font-size: 26px;
+}
+
+.demo-title, .demo-desc {
+    padding-bottom: 15px;
+}
+
+.demo-desc {
+    width: 80%;
+}
+
+.canvas-container {
+    position: relative;
+}
+
+/*.canvas-container ul {
+    position: absolute;
+    top: 0;
+    display: block;
+    width: 100%;
+}*/
+
+#demo-view {
+    background: -webkit-linear-gradient(#fff, #d7d5d8); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#fff, #d7d5d8); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#fff, #d7d5d8); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#fff, #d7d5d8); /* Standard syntax */
+    border: 1px solid;
+    width: 100%;
+    height: 500px;
+}
