@@ -1,6 +1,7 @@
 requirejs.config({
     baseUrl: '/public',
     paths: {
+        'dictionary' : './dictionary'
     }
 });
 
@@ -11,11 +12,9 @@ var g_canvasName,
     g_stateIndex = 0,
     g_activeState,
     g_socket,
-    g_mySocketId;
-
-var g_gameTaskOn,
-    g_buttonMap,
-    g_oPLAYERS = {};
+    g_mySocketId,
+    g_gameTaskOn,
+    g_buttonMap;
 
 requirejs(
     [
@@ -73,27 +72,20 @@ requirejs(
         {
             g_socket = io();
             g_socket.on('give id', function( id ) {
-                trace('id = ' + id);
-                g_mySocketId = id;
-            });
+                    trace('id = ' + id);
+                    g_mySocketId = id;
+                }
+            );
             g_socket.on('task allocation', function( f ) {
-                trace('task allocation');
-                g_gameTaskOn = f;
-                startGame();
-            });
-            g_socket.on('button map', function( btnMap ) {
-                trace('button map');
-                g_buttonMap = btnMap;
-            });
-            g_socket.on('new player', function( data ) {
-                trace('new player');
-                if( data.id == g_mySocketId ) return;
-                g_oPLAYERS[data.id] = data;
-            });
-            g_socket.on('remove player', function( data ) {
-                trace('remove player');
-                delete g_oPLAYERS[data.id];
-            });
+                    trace('task allocation');
+                    g_gameTaskOn = f;
+                    startGame();
+                }
+            );
+            g_socket.on('button map', function( map ) {
+                    g_buttonMap = map;
+                }
+            );
         }
 
         function app_tick( event )
